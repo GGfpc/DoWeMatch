@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+
+    android:background="#ff26b2ba"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Sacador">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/perguntaCaixaPerguntas"
+        android:textSize="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_below="@+id/numPerguntaCaixa"
+        android:layout_centerHorizontal="true"
+        android:text="Placeholder"
+        android:clickable="false"
+        android:longClickable="false"
+        android:textIsSelectable="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="none"
+        android:typeface="sans" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:id="@+id/numPerguntaCaixa"
+        android:layout_marginTop="68dp"
+        android:text="#"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="sans"
+        android:clickable="false"
+        android:longClickable="false"
+        android:inputType="none"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/botao_sim"
+        android:id="@+id/yesButton"
+        android:onClick="yesButtonOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/numPerguntaCaixa"
+        android:layout_toStartOf="@+id/numPerguntaCaixa"
+        android:layout_marginBottom="79dp"
+        android:typeface="sans" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/botao_nao"
+        android:id="@+id/noButton"
+        android:onClick="noButtonOnClick"
+        android:layout_alignTop="@+id/yesButton"
+        android:layout_toRightOf="@+id/numPerguntaCaixa"
+        android:layout_toEndOf="@+id/numPerguntaCaixa"
+        android:typeface="sans" />
+
+</RelativeLayout>
