@@ -29,10 +29,10 @@ public class Sacador extends ActionBarActivity {
         setContentView(R.layout.activity_sacador);
 
         Pergunta p1 = new Pergunta("Tem franja?", true);
-        Pergunta p2 = new Pergunta("Gosta de hipsters?", false);
-        Pergunta p3 = new Pergunta("Costuma ser macia?", true);
-        Pergunta p4 = new Pergunta("Prefere barbas?", false);
-        Pergunta p5 = new Pergunta("Tem meeesmo franja?", true);
+        Pergunta p2 = new Pergunta("Gosta do Anselmo?", false);
+        Pergunta p3 = new Pergunta("Tem dinheiro?", true);
+        Pergunta p4 = new Pergunta("Quer conhecer os meus pais?", false);
+        Pergunta p5 = new Pergunta("Tomou banho hoje?", true);
 
         perguntas.add(p1);
         perguntas.add(p2);
