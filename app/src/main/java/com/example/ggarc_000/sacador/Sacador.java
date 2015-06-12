@@ -18,7 +18,7 @@ public class Sacador extends ActionBarActivity {
 
 
 
-    private ArrayList<Pergunta> perguntas = new ArrayList<Pergunta>();
+    private static ArrayList<Pergunta> perguntas = new ArrayList<Pergunta>();
     private static int perguntaCount;
     private static int perguntasCertas;
 
@@ -28,21 +28,19 @@ public class Sacador extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sacador);
 
-        Pergunta p1 = new Pergunta("Tem franja?", true);
-        Pergunta p2 = new Pergunta("Gosta do Anselmo?", false);
-        Pergunta p3 = new Pergunta("Tem dinheiro?", true);
-        Pergunta p4 = new Pergunta("Quer conhecer os meus pais?", false);
-        Pergunta p5 = new Pergunta("Tomou banho hoje?", true);
-
-        perguntas.add(p1);
-        perguntas.add(p2);
-        perguntas.add(p3);
-        perguntas.add(p4);
-        perguntas.add(p5);
 
         perguntaCount = 0;
         perguntasCertas = 0;
 
+    }
+
+
+    public static void setPerguntas(Pergunta pergunta) {
+        perguntas.add(pergunta);
+    }
+
+    public static void resetPerguntas() {
+        perguntas.clear();
     }
 
     @Override

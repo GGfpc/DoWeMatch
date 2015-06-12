@@ -26,7 +26,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:inputType="none"
-        android:typeface="sans" />
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:backgroundTint="#ff26b2ba" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -41,7 +44,10 @@
         android:typeface="sans"
         android:clickable="false"
         android:longClickable="false"
-        android:inputType="none"/>
+        android:inputType="none"
+        android:backgroundTint="#ff26b2ba"
+        android:textStyle="bold"
+        android:textColor="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"
@@ -53,7 +59,10 @@
         android:layout_toLeftOf="@+id/numPerguntaCaixa"
         android:layout_toStartOf="@+id/numPerguntaCaixa"
         android:layout_marginBottom="79dp"
-        android:typeface="sans" />
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textColor="#ff26b2ba"
+        android:background="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"
@@ -64,6 +73,9 @@
         android:layout_alignTop="@+id/yesButton"
         android:layout_toRightOf="@+id/numPerguntaCaixa"
         android:layout_toEndOf="@+id/numPerguntaCaixa"
-        android:typeface="sans" />
+        android:typeface="sans"
+        android:textColor="#ff26b2ba"
+        android:textStyle="bold"
+        android:background="#ffffffff" />
 
 </RelativeLayout>

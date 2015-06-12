@@ -6,33 +6,54 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
-public class Splash extends ActionBarActivity {
+public class Selector extends ActionBarActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-
-        TextView text = (TextView) findViewById(R.id.SplashScreen);
-        text.setKeyListener(null);
+        setContentView(R.layout.activity_selector);
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_splash, menu);
+        getMenuInflater().inflate(R.menu.menu_selector, menu);
         return true;
     }
 
-    public void splashButtonOnClick(View view){
+    public void criarOnClick(View view){
 
-        Intent intent = new Intent(this, Selector.class);
+        Intent intent = new Intent(this, AdicionarPerguntas.class);
         startActivity(intent);
-        finish();
+    }
+
+    public void defaultOnClick(View view){
+        Sacador.resetPerguntas();
+
+        Pergunta p1 = new Pergunta("Tem franja?", true);
+        Pergunta p2 = new Pergunta("Gosta do Anselmo?", false);
+        Pergunta p3 = new Pergunta("Tem dinheiro?", true);
+        Pergunta p4 = new Pergunta("Quer conhecer os meus pais?", false);
+        Pergunta p5 = new Pergunta("Tomou banho hoje?", true);
+
+        Sacador.setPerguntas(p1);
+        Sacador.setPerguntas(p2);
+        Sacador.setPerguntas(p3);
+        Sacador.setPerguntas(p4);
+        Sacador.setPerguntas(p5);
+
+        Intent intent = new Intent(this, Sacador.class);
+        startActivity(intent);
+
 
     }
 
